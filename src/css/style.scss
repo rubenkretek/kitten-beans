@@ -1,0 +1,26 @@
+
+// Packages
+@import "include-media/dist/_include-media.scss"; 
+
+// Global imports
+@import "./variables.scss";
+
+// Components
+@import "./components/header.scss";
+// @import "./actor-card.scss";
+// @import "./button.scss";
+// @import "./footer.scss";
+// @import "./movies.scss";
+// @import "./reset.scss";
+// @import "./small-thumbnail.scss";
+// @import "./spinner.scss";
+
+
+// Global styles
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: $secondary-background-color;
+}

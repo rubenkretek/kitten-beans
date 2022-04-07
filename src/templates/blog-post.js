@@ -32,8 +32,9 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       >
         <header>
           <h1 itemProp="headline">{parse(post.title)}</h1>
-
           <p>{post.date}</p>
+          <h2>Location: {post.cafeInfo.location}</h2>
+          <h2>ID: {post.id}</h2>
 
           {/* if we have a featured image for this post let's display it */}
           {featuredImage?.data && (
@@ -113,6 +114,15 @@ export const pageQuery = graphql`
               )
             }
           }
+        }
+      }
+      cafeInfo {
+        dateVisited
+        location
+        website
+        features {
+          id
+          name
         }
       }
     }

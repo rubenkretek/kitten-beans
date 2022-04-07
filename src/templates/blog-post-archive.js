@@ -28,7 +28,6 @@ const BlogIndex = ({
   return (
     <Layout isHomePage>
       <Seo title="All posts" />
-
       <Bio />
 
       <ol style={{ listStyle: `none` }}>

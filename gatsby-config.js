@@ -14,6 +14,7 @@ module.exports = {
    * If you need any more you can search here: https://www.gatsbyjs.com/plugins/
    */
   plugins: [
+    `gatsby-plugin-sass`,
     {
       /**
        * First up is the WordPress source plugin that connects Gatsby
@@ -28,7 +29,7 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://wpgatsbydemo.wpengine.com/graphql`,
+          `http://kittenbeans.local/graphql`,
       },
     },
 
@@ -70,6 +71,7 @@ module.exports = {
 
     // See https://www.gatsbyjs.com/plugins/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     `gatsby-plugin-react-helmet`,
+    `include-media`,
 
     /**
      * this (optional) plugin enables Progressive Web App + Offline functionality
