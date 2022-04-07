@@ -1,0 +1,23 @@
+.page-banner {
+    &__title {
+        padding: 50px 0;
+        max-width: 850px;
+        @include media(">large") {
+            padding: 100px 0;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 40px;
+            margin: 0;
+            @include media(">medium") {
+                font-size: 60px;
+            }
+            @include media(">xlarge") {
+                font-size: 90px;
+            }
+            span {
+                color: $secondary-color;
+            }
+        }
+    }
+}

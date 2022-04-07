@@ -4,9 +4,11 @@
 
 // Global imports
 @import "./variables.scss";
+@import "./layout.scss";
 
 // Components
 @import "./components/header.scss";
+@import "./components/page-banner.scss";
 // @import "./actor-card.scss";
 // @import "./button.scss";
 // @import "./footer.scss";
@@ -23,4 +25,10 @@ html {
 body {
   font-family: 'Rubik', sans-serif;
   background-color: $secondary-background-color;
+  color: $black;
+}
+
+h1 {
+  line-height: 1.15;
+
 }

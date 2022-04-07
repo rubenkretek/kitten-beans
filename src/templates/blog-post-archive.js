@@ -6,6 +6,9 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import PageBanner from "../components/PageBanner"
+
+
 const BlogIndex = ({
   data,
   pageContext: { nextPagePath, previousPagePath },
@@ -14,7 +17,7 @@ const BlogIndex = ({
 
   if (!posts.length) {
     return (
-      <Layout isHomePage>
+      <Layout>
         <Seo title="All posts" />
         <Bio />
         <p>
@@ -26,7 +29,10 @@ const BlogIndex = ({
   }
 
   return (
-    <Layout isHomePage>
+    <Layout>
+      <PageBanner>
+        <h1><span>Cat cafes</span> we have visted</h1>
+      </PageBanner>
       <Seo title="All posts" />
       <Bio />
 
