@@ -1,0 +1,20 @@
+.button {
+    background-color: $primary-color;
+    border-radius: $global-border-radius-small;
+    color: $white;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s ease;
+    font-size: 14px;
+    padding: 15px 30px;
+    @include media(">xlarge") {
+        font-size: 18px;
+        padding: 20px 50px;
+    }
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        background-color: scale-color($primary-color,$lightness:15%);;
+    }
+}

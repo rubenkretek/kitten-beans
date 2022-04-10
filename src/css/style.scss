@@ -7,15 +7,12 @@
 @import "./layout.scss";
 
 // Components
+@import "./components/button.scss";
+@import "./components/featured-posts.scss";
 @import "./components/header.scss";
 @import "./components/page-banner.scss";
-// @import "./actor-card.scss";
-// @import "./button.scss";
-// @import "./footer.scss";
-// @import "./movies.scss";
-// @import "./reset.scss";
-// @import "./small-thumbnail.scss";
-// @import "./spinner.scss";
+
+@import "./page/home.scss";
 
 
 // Global styles
@@ -30,5 +27,42 @@ body {
 
 h1 {
   line-height: 1.15;
+}
 
+h2 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  @include media(">large") {
+    font-size: 28px;
+  }
+  @include media(">xlarge") {
+    font-size: 36px;
+  }
+}
+h3 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  @include media(">large") {
+    font-size: 20px;
+  }
+  @include media(">xlarge") {
+    font-size: 26px;
+  }
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.6;
+  @include media(">large") {
+    font-size: 16px;
+  }
+  @include media(">xlarge") {
+    font-size: 18px;
+  }
+}
+
+div {
+  box-sizing: border-box;
 }
