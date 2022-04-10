@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Logo from '../images/logo-with-text.svg'
 
@@ -11,7 +10,6 @@ const Header = ({ isHomePage, title }) => {
         <header className="header">
             <div className="header__logo">
                 <Link to="/">
-                    {/* <StaticImage src="../images/kitten-beans-logo.png" alt="Kitten Beans Logo" /> */}
                     <Logo />
                 </Link>
             </div>

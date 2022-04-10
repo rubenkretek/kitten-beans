@@ -1,0 +1,44 @@
+.footer {
+    background: $dark-background;
+    padding: 50px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &::before {
+        content: '';
+        background-color: $dark-background;
+        position: absolute;
+        top: -55px;
+        left: 0;
+        height: 55px;
+        width: 100%;
+        z-index: -1;
+    }
+    @include media(">large") {
+        padding: 100px 50px;
+    }
+    &__logo {
+        text-align: center;
+        path#KITTENBEANS {
+            fill: white;
+        }
+    }
+    &__link {
+        margin-top: 15px;
+        text-align: center;
+        font-weight: 600;
+        color: $white;
+        svg {
+            max-width: 150px;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+}
