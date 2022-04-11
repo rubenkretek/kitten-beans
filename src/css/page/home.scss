@@ -1,6 +1,9 @@
 .home {
     background: $white;
     border-radius: $global-border-radius;
+    box-shadow: $global-shadow;
+    position: relative;
+    z-index: 1;
     padding-top: 25px;
     padding-bottom: 50px;
     @include media(">large") {

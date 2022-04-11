@@ -22,6 +22,10 @@ $text-color: $black;
 // Properties
 $global-border-radius: 38px;
 $global-border-radius-small: 12px;
+$global-shadow:  0px 2.6px 3.6px rgba(0, 0, 0, 0.021),
+                0px 7.3px 10px rgba(0, 0, 0, 0.03),
+                0px 17.5px 24.1px rgba(0, 0, 0, 0.039),
+                0px 58px 80px rgba(0, 0, 0, 0.06) ;
 
 //Breakpoints
 $breakpoints: (

@@ -12,6 +12,7 @@
 @import "./components/footer.scss";
 @import "./components/header.scss";
 @import "./components/page-banner.scss";
+@import "./components/post-archive.scss";
 
 @import "./page/home.scss";
 
@@ -50,6 +51,17 @@ h3 {
   }
   @include media(">xlarge") {
     font-size: 26px;
+  }
+}
+h4 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  @include media(">large") {
+    font-size: 18px;
+  }
+  @include media(">xlarge") {
+    font-size: 24px;
   }
 }
 
