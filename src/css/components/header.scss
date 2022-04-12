@@ -28,9 +28,13 @@
             align-items: center;
             justify-content: space-between;
             gap: 10px;
+            border: 1px solid #104d5b40;
+            border-radius: $global-border-radius-small;
             @include media(">medium") {
                 max-width: 500px;
                 margin-left: auto;
+                border: none;
+                border-radius: 0;
             }
             li {
                 flex-basis: 0;

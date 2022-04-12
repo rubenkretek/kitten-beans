@@ -33,104 +33,106 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
       <PageBanner>
         <h1>{parse(post.title)}<span><br />Cat cafe</span></h1>
       </PageBanner>
-      <div className="layout__container layout__container--no-padding-large">
-        <article
-          className="post"
-          itemScope
-          itemType="http://schema.org/Article"
-        >
-          <aside className="post__aside">
-            <h2 className="post__subtitle">About</h2>
-            <div className="post__about-container">
-              <div className="post__about post__about--location">
-                <div className="post__about-icon">
-                  <MdLocationPin />
-                </div>
-                <div className="post__about-label">Location</div>
-                <div className="post__about-info">
-                  <div className="post__about-value">
-                    {cafeInfo.fullAddress}
+      <div className="post__outer">
+        <div className="layout__container layout__container--no-padding-large">
+          <article
+            className="post"
+            itemScope
+            itemType="http://schema.org/Article"
+          >
+            <aside className="post__aside">
+              <h2 className="post__subtitle">About</h2>
+              <div className="post__about-container">
+                <div className="post__about post__about--location">
+                  <div className="post__about-icon">
+                    <MdLocationPin />
                   </div>
-                </div>
-              </div>
-
-              <div className="post__about post__about--date-visited">
-                <div className="post__about-icon">
-                  <MdCalendarToday />
-                </div>
-                <div className="post__about-label">Date Visited</div>
-                <div className="post__about-info">
-                  <div className="post__about-value">
-                    {cafeInfo.dateVisited}
-                  </div>
-                </div>
-              </div>
-
-              <div className="post__about post__about--website">
-                <div className="post__about-icon">
-                  <MdPublic />
-                </div>
-                <div className="post__about-label">Website</div>
-                <div className="post__about-info">
-                  <div className="post__about-value">
-                    {cafeInfo.website}
-                  </div>
-                </div>
-              </div>
-
-              <div className="post__about post__about--features">
-                <div className="post__about-icon">
-                  <MdInfo />
-                </div>
-                <div className="post__about-label">Features</div>
-                <div className="post__about-info">
-                  {cafeInfo.features.map(feature =>
+                  <div className="post__about-label">Location</div>
+                  <div className="post__about-info">
                     <div className="post__about-value">
-                      {feature.name}
+                      {cafeInfo.fullAddress}
                     </div>
-                  )}
+                  </div>
+                </div>
+
+                <div className="post__about post__about--date-visited">
+                  <div className="post__about-icon">
+                    <MdCalendarToday />
+                  </div>
+                  <div className="post__about-label">Date Visited</div>
+                  <div className="post__about-info">
+                    <div className="post__about-value">
+                      {cafeInfo.dateVisited}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="post__about post__about--website">
+                  <div className="post__about-icon">
+                    <MdPublic />
+                  </div>
+                  <div className="post__about-label">Website</div>
+                  <div className="post__about-info">
+                    <div className="post__about-value">
+                      {cafeInfo.website}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="post__about post__about--features">
+                  <div className="post__about-icon">
+                    <MdInfo />
+                  </div>
+                  <div className="post__about-label">Features</div>
+                  <div className="post__about-info">
+                    {cafeInfo.features.map(feature =>
+                      <div className="post__about-value">
+                        {feature.name}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
+            </aside>
+            <div className="post__main">
+              <header>
+                <h2 className="post__subtitle">{post.cafeInfo.subtitle}</h2>
+                <p className="post__posted-date">Posted on: {post.date}</p>
+              </header>
+
+              {!!post.content && (
+                <section itemProp="articleBody">{parse(post.content)}</section>
+              )}
             </div>
-          </aside>
-          <div className="post__main">
-            <header>
-              <h2 className="post__subtitle">{post.cafeInfo.subtitle}</h2>
-              <p className="post__posted-date">Posted on: {post.date}</p>
-            </header>
 
-            {!!post.content && (
-              <section itemProp="articleBody">{parse(post.content)}</section>
-            )}
-          </div>
+            <nav className="post__post-nav">
+              <div className="post__post-nav-title">
+                <h4>Explore other cat cafes</h4>
+              </div>
+              <div className="post__post-nav-menu">
+                <ul className="post__post-nav-list">
+                  <li className="post__post-nav-list-item">
+                    {previous && (
+                      <Link to={previous.uri} rel="prev">
+                        ← {parse(previous.title)}
+                      </Link>
+                    )}
+                  </li>
 
-          <nav className="post__post-nav">
-            <div className="post__post-nav-title">
-              <h4>Explore other cat cafes</h4>
-            </div>
-            <div className="post__post-nav-menu">
-              <ul className="post__post-nav-list">
-                <li className="post__post-nav-list-item">
-                  {previous && (
-                    <Link to={previous.uri} rel="prev">
-                      ← {parse(previous.title)}
-                    </Link>
-                  )}
-                </li>
-
-                <li className="post__post-nav-list-item">
-                  {next && (
-                    <Link to={next.uri} rel="next">
-                      {parse(next.title)} →
-                    </Link>
-                  )}
-                </li>
-              </ul>
-            </div>
-          </nav>
+                  <li className="post__post-nav-list-item">
+                    {next && (
+                      <Link to={next.uri} rel="next">
+                        {parse(next.title)} →
+                      </Link>
+                    )}
+                  </li>
+                </ul>
+              </div>
+            </nav>
 
 
-        </article>
+          </article>
+        </div>
       </div>
 
 

@@ -1,15 +1,31 @@
 .post {
     display: grid;
-    gap: 30px;
     align-items: start;
     grid-template-columns: 1fr;
-    padding-bottom: 50px;
+    gap: 20px;
     @include media(">large") {
+        gap: 30px;
         padding-bottom: 100px;
     }
     @include media(">xlarge") {
         grid-template-columns: repeat(12, 1fr);
 
+    }
+    &__outer {
+        position: relative;
+        border-radius: $global-border-radius;
+        background-color: $secondary-background-color;
+        box-shadow: $global-shadow;
+        &::before {
+            content: '';
+            background-color: $dark-background;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 55px;
+            width: 100%;
+            z-index: -1;
+        }
     }
     &__main {
         background: $white;
@@ -115,7 +131,10 @@
         background: $white;
         border-radius: $global-border-radius;
         box-shadow: $global-shadow;
-        padding: 30px;
+        padding: 20px;
+        @include media(">medium") {
+            padding: 30px;
+        }
         @include media(">xlarge") {
             grid-column: 1/9;
         }
@@ -128,11 +147,16 @@
         }
         &-list {
             list-style: none;
-            padding: 30px 30px 0;
+            padding: 30px 0 0;
             margin: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            @include media(">medium") {
+                flex-direction: row;
+            }
         }
         &-list-item {
             a {
