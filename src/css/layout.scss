@@ -8,5 +8,11 @@
             padding-left: 50px;
             padding-right: 50px;
         }
+        &--no-padding-large {
+            @include media("<large") {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 }

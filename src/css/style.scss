@@ -12,6 +12,7 @@
 @import "./components/footer.scss";
 @import "./components/header.scss";
 @import "./components/page-banner.scss";
+@import "./components/post.scss";
 @import "./components/post-archive.scss";
 
 @import "./page/home.scss";
@@ -78,4 +79,8 @@ p {
 
 div {
   box-sizing: border-box;
+}
+
+.wp-block-image img {
+  height: auto;
 }
