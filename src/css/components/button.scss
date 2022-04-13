@@ -9,6 +9,7 @@
     font-size: 14px;
     padding: 15px 30px;
     text-align: center;
+    border: none;
     @include media(">xlarge") {
         font-size: 18px;
         padding: 20px 50px;

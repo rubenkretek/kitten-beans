@@ -1,0 +1,28 @@
+.contact {
+    background: $white;
+    border-radius: $global-border-radius;
+    box-shadow: $global-shadow;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    @include media(">large") {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }  
+    &::before {
+        content: '';
+        background-color: $dark-background;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 55px;
+        width: 100%;
+        z-index: -1;
+    }
+    &__form {
+        max-width: 600px;
+        background-color: $primary-background-color;
+        padding: 30px;
+        border-radius: $global-border-radius-small;
+    }
+}
